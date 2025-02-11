@@ -1,3 +1,13 @@
 .chartContainer {
-    max-height: 200px;
+    position: relative;
+    margin-top: 16px;
+
+    div {
+        color: rgb(96 171 83);
+        font-size: 24px;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
 }

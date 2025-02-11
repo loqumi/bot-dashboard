@@ -20,18 +20,35 @@ const botIcons = {
     white: noImageIcon,
 };
 
+const botNames = {
+    red: 'ATTACK',
+    green: 'DEFENSE',
+    yellow: 'MEGATRON',
+    blue: 'BALANCE',
+    orange: 'ATTACK',
+    white: 'PLACE BOT HERE',
+}
+
 const Bots: React.FC<{ timeRange: TimeRange, data: Bot[] }> = ({timeRange, data}) => {
     return (
         <div className={styles.botsContainer}>
             {data.map((bot) => {
                 const iconName = bot.name.split('_')[0] as BotIconKey;
+                const displayName = botNames[iconName] || bot.name;
+
+                const textStyle = bot.name === 'white_bot'
+                    ? { color: 'rgb(77 97 120)' }
+                    : { color: 'white' };
+
                 return (
                     <div className={styles.botItem} key={bot.name}>
                         <img src={botIcons[iconName]} alt={bot.name} />
-                        <div>{bot.name}</div>
-                        <div style={{ color: bot[timeRange] > 0 ? 'green' : 'red' }}>
-                            {bot[timeRange]}%
-                        </div>
+                        <p style={textStyle}>{displayName}</p>
+                        {bot.name !== "white_bot" && (
+                            <div style={{ color: bot[timeRange] > 0 ? "rgb(96 171 83)" : 'rgb(245 67 128)' }}>
+                                {bot[timeRange]}%
+                            </div>
+                        )}
                     </div>
                 );
             })}

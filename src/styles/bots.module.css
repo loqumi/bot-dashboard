@@ -1,16 +1,31 @@
 .botsContainer {
+    padding: 8px 16px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     flex-wrap: wrap;
-    gap: 8px
+    gap: 1px
 }
 
 .botItem {
-    padding: 16px;
-    border-radius: 8px;
-    background: var(--nav-color);
+    padding: 12px 4px;
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: bold;
+    background: var(--card-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    p {
+        margin: 0;
+        width: 56px;
+        text-align: center;
+    }
+
+    img {
+        margin-top: 8px;
+        width: 45%;
+        margin-bottom: 8px;
+    }
 }

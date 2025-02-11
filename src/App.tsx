@@ -33,7 +33,7 @@ function App() {
             <div className={styles.infoContainer}>
                 <div className={styles.capitalInfo}>
                     <p>TRADING CAPITAL</p>
-                    <p>{data.trading_capital} BTC</p>
+                    <p>{data.trading_capital} {data.trading_capital_currency}</p>
                 </div>
                 <div className={styles.coinsContainer}>
                     <p>BALANCE: <b>{data.balance}</b> <BsFillHCircleFill /></p>

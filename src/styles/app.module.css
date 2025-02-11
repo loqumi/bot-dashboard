@@ -15,9 +15,12 @@
 
     .capitalInfo {
         p {
+            color: var(--primary);
             font-size: 12px;
         }
         p:last-child {
+            text-transform: uppercase;
+            color: var(--secondary);
             font-size: 35px;
         }
     }
@@ -54,7 +57,7 @@
     color: var(--primary);
     font-weight: bold;
     align-items: center;
-    padding: 16px;
+    padding: 4px 16px;
     display: flex;
     font-size: 12px;
     justify-content: space-between;
@@ -70,10 +73,12 @@
         background: var(--bg-color);
         border: 1px solid var(--card-color);
     }
+
     button:hover {
         color: var(--secondary);
         border: 1px solid var(--secondary);
     }
+
     button.active {
         font-weight: bold;
         color: var(--secondary);
