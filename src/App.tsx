@@ -6,12 +6,20 @@ import { DashboardInfo } from "./types/types";
 
 export type TimeRange = '24h' | '7d' | '30d' | 'all_time';
 
+const isValidTimeRange = (value: string | null): value is TimeRange => {
+    return value === '24h' || value === '7d' || value === '30d' || value === 'all_time';
+};
+
 function App() {
-    const [timeRange, setTimeRange] = useState<TimeRange>('all_time');
+    const savedTime = localStorage.getItem('savedTime');
+    const initialTimeRange = isValidTimeRange(savedTime) ? savedTime : 'all_time';
+    const [timeRange, setTimeRange] = useState<TimeRange>(initialTimeRange);
 
     const handleTimeRangeChange = (range: TimeRange) => {
         setTimeRange(range);
+        localStorage.setItem('savedTime', range);
     };
+
 
   return (
     <div className="App">
