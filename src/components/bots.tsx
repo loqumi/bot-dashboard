@@ -1,5 +1,5 @@
-import data from "../data.json";
 import { TimeRange } from "../App";
+import { Bot } from "../types/types";
 import orangeIcon from "../icons/orange.png";
 import attackIcon from "../icons/attack.png";
 import defenceIcon from "../icons/defence.png";
@@ -19,8 +19,8 @@ const botIcons = {
     white: noImageIcon,
 };
 
-const Bots: React.FC<{ timeRange: TimeRange }> = ({timeRange}) => {
-    const [botsData, setBotsData] = useState(data.bots);
+const Bots: React.FC<{ timeRange: TimeRange, data: Bot[] }> = ({timeRange, data}) => {
+    const [botsData, setBotsData] = useState(data);
 
     useEffect(() => {
         const savedData = localStorage.getItem('botsData');
