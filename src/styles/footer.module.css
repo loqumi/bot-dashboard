@@ -20,6 +20,7 @@
     }
 
     div {
+        text-wrap: nowrap;
         color: var(--primary);
         transition: .3s ease;
         font-size: 10px;
@@ -31,8 +32,8 @@
 
         svg {
             transition: .3s ease;
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
         }
 
         svg:not(.iconStroke) {
