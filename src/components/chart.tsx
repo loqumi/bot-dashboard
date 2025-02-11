@@ -1,6 +1,7 @@
 import React from "react";
+import { TimeRange } from "../App";
 import { Line } from 'react-chartjs-2';
-import {TimeRange} from "../App";
+import styles from "../styles/chart.module.css";
 import {
     CategoryScale,
     Chart as ChartJS,
@@ -61,7 +62,7 @@ const ChartLine: React.FC<{ timeRange: TimeRange }> = ({ timeRange }) => {
     });
 
     return (
-        <div key={timeRange}>
+        <div className={styles.chartContainer} key={timeRange}>
             <Line options={options} data={getRandomChart()} />
             <div>+{Math.floor(Math.random() * 100)}%</div>
         </div>

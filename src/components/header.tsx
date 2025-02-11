@@ -1,10 +1,11 @@
 import React from "react";
-import { IoMenuOutline } from "react-icons/io5";
 import { SlRefresh } from "react-icons/sl";
+import { IoMenuOutline } from "react-icons/io5";
+import styles from "../styles/header.module.css";
 
 const Header = () => {
     return (
-        <header>
+        <header className={styles.headerContainer}>
             <IoMenuOutline />
             <h1>Dashboard</h1>
             <SlRefresh />

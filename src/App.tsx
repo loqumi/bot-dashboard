@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Footer from "./components/footer";
 import Header from "./components/header";
 import ChartLine from "./components/chart";
+import styles from "./styles/app.module.css";
 import { DashboardInfo } from "./types/types";
 import { BsFillHCircleFill } from "react-icons/bs";
 
@@ -25,7 +26,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className={styles.container}>
         <Header />
 
         <div>

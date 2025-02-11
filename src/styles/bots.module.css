@@ -1,0 +1,16 @@
+.botsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.botItem {
+    padding: 16px;
+    border-radius: 8px;
+    background: var(--nav-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
