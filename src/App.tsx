@@ -1,10 +1,11 @@
 import data from "./data.json";
 import Bots from "./components/bots";
 import React, { useState } from 'react';
+import Footer from "./components/footer";
+import Header from "./components/header";
 import ChartLine from "./components/chart";
 import { DashboardInfo } from "./types/types";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import { BsFillHCircleFill } from "react-icons/bs";
 
 export type TimeRange = '24h' | '7d' | '30d' | 'all_time';
 
@@ -30,8 +31,8 @@ function App() {
         <div>
             TRADING CAPITAL: {data.trading_capital} ETH
             <div>
-                BALANCE: {data.balance}
-                ON HOLD: {data.on_hold}
+                BALANCE: {data.balance} <BsFillHCircleFill />
+                ON HOLD: {data.on_hold} <BsFillHCircleFill />
             </div>
         </div>
 
