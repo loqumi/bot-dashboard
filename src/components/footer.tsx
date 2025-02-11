@@ -9,11 +9,26 @@ import styles from "../styles/footer.module.css";
 const Footer = () => {
     return (
         <nav className={styles.footerNav}>
-            <TfiMenuAlt />
-            <LuChartNoAxesCombined />
-            <TiShoppingCart />
-            <TbCoin />
-            <CiSettings />
+            <div className={styles.active}>
+                <TfiMenuAlt />
+                Dashboard
+            </div>
+            <div>
+                <LuChartNoAxesCombined className={styles.iconStroke} />
+                Megabot
+            </div>
+            <div>
+                <TiShoppingCart />
+                Bot market
+            </div>
+            <div>
+                <TbCoin className={styles.iconStroke}/>
+                Coin prices
+            </div>
+            <div>
+                <CiSettings />
+                Profile
+            </div>
         </nav>
     )
 }
