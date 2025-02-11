@@ -1,5 +1,6 @@
 import React from "react";
 import { Line } from 'react-chartjs-2';
+import {TimeRange} from "../App";
 import {
     CategoryScale,
     Chart as ChartJS,
@@ -10,8 +11,6 @@ import {
     Title,
     Tooltip
 } from "chart.js";
-
-type TimeRange = '24h' | '7d' | '30d' | 'all_time';
 
 ChartJS.register(
     CategoryScale,
